@@ -1,0 +1,112 @@
+html{
+    font-size: 16px;
+    line-height: 1.50;
+    font-family: 'Libre Baskerville', serif;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    background-color: #222;
+    color: #ffffff;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/*--The Header--*/
+.container{
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(39, 192, 39);
+    /*border: 1px solid red;*/
+}
+
+.menu{
+    display: none;
+}
+
+.btn{
+    background-color: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*Reponsive Disign*/
+@media (min-width: 768px) {
+    .header{
+        padding-left: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(39, 192, 39);
+        /*border: 1px solid red;*/
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+
+    .menu-list{
+        list-style-type: none;
+        font-size: 1.2rem;
+    }
+    
+    .menu-link{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .btn{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(39, 192, 39);
+        /*border: 1px solid red;*/
+        padding: 10px 50px;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: flex-end;
+        gap: 10%;
+        width: 100%;
+    }
+
+
+    .menu-list{
+        list-style-type: none;
+        font-size: 1.2rem;
+    }
+    
+    .menu-link{
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .btn{
+        display: none;
+        
+    }
+}
