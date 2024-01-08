@@ -3,6 +3,7 @@ html{
     line-height: 1.50;
     font-family: 'Libre Baskerville', serif;
     box-sizing: border-box;
+    background-color: #222;
 }
 
 *,
@@ -11,9 +12,9 @@ html{
     box-sizing: inherit;
 }
 
-body{
+body, h1, h2, h3, h4, p{
     margin: 0;
-    background-color: #222;
+    /*background-color: #222;*/
     color: #ffffff;
     font-family: 'Libre Baskerville', serif;
 }
@@ -44,6 +45,78 @@ body{
     font-size: 30px;
     cursor: pointer;
 }
+
+/*Main*/
+/*Home section*/
+.main-container{
+    padding: 50px 30px;
+    border: 2px solid red;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.main-text{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.img{
+    width: 70%;
+    box-shadow: 5px 5px 20px #ffffff;
+}
+
+/*About section*/
+.cards{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.titile-logo{
+    text-align: center;
+    padding: 20px 0px;
+    color: ;
+}
+.logo-about{
+    width: 100%;
+    box-shadow: 5px 5px 20px #ffffff;
+}
+
+/*Services section*/
+.img-dev{
+    width: 100px;
+    background-color: #ffffff;
+}
+
+.text-card{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 
 /*Reponsive Disign*/
 @media (min-width: 768px) {
@@ -90,7 +163,7 @@ body{
     .menu{
         display: flex;
         justify-content: flex-end;
-        gap: 10%;
+        gap: 3%;
         width: 100%;
     }
 
