@@ -13,6 +13,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -38,6 +39,7 @@
         <h1 class="main-title">
           Hi, I'm Oliver <span>Full stack</span> developer
         </h1>
+       <div class="portada">
         <p class="main-text">
           My name is Oliver , student of Full-Stack developer from Peru
         </p>
@@ -47,8 +49,9 @@
           alt="image of author"
           align="center"
         />
+       </div>
       </article>
-      <br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /> <br> <br><br><br><br>
       <article class="section about">
         <h2>About me</h2>
         <h3>presentacion</h3>
@@ -135,25 +138,50 @@
         <div class="cards">
           <div class="card-img">
             <h3 class="title-proyects">E-comerse</h3>
-            <img src="https://unsplash.com/es/random/pets?" alt="proyecto 1">
+            <img class="img-proyect" src="./img/proyect.jpg" alt="proyecto 1">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestias perspiciatis ipsum reiciendis impedit, praesentium consectetur corporis illo ea laboriosam quos quam exercitationem amet. Suscipit mollitia autem commodi accusamus libero.</p>
           </div>
 
           <div class="card-img">
             <h3 class="title-proyects">Shring-Top</h3>
-            <img src="https://unsplash.com/es/random/tech?" alt="proyecto 2">
+            <img class="img-proyect" src="./img/proyect.jpg" alt="proyecto 2">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, labore! Qui recusandae nesciunt obcaecati magni omnis quisquam iure adipisci distinctio fugiat reprehenderit quod dolores aliquam dolorum ut, eum consectetur voluptatum!</p>
           </div>
 
           <div class="card-img">
             <h3 class="title-proyects">Calculator</h3>
-            <img src="https://unsplash.com/es/random/shop?" alt="proyecto 3">
+            <img class="img-proyect" src="./img/proyect.jpg" alt="proyecto 3">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ratione ipsa praesentium veritatis. Ducimus facere similique, natus maiores perspiciatis animi illum quisquam veniam, cumque pariatur enim vel soluta est at!</p>
           </div>
         </div>
       </article>
 
-      <article class="section about"></article>
+      <article class="section Contact">
+        <form action="">
+          <fieldset class="formulario">
+            <h3 class="title-formulario">Contact me</h3>
+            <p class="text-formulario">let's talk about your proyects, I'm here to colaborate you.</p>
+            <label class="labels" for="name">Name</label>
+            <input class="entrada" type="text" id="name" name="name" placeholder="name" >
+
+            <label class="labels" for="email">Email</label>
+            <input class="entrada" type="email" id="email" name="email" placeholder="email">
+
+            <label class="labels" for="tel">Telephone</label>
+            <input class="entrada" type="tel" id="tel" name="tel" placeholder="telephone">
+            <button type="submit" class="btn-enviar">Enviar</button>
+          </fieldset>
+        </form>
+        <div class="social-media">
+          <i class='bx bxl-github'></i>
+          <i class='bx bx-envelope' ></i>
+          <i class='bx bxl-linkedin' ></i>
+          <i class='bx bxl-twitter' ></i>
+        </div>
+      </article>
     </main>
+    <footer>
+      <p class="derechos">copyright: olicoder2024</p>
+    </footer>
   </body>
 </html>
