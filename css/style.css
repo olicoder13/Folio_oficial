@@ -1,9 +1,14 @@
 html{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.50;
     font-family: 'Libre Baskerville', serif;
     box-sizing: border-box;
-    background-color: #222;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -12,15 +17,6 @@ html{
     box-sizing: inherit;
 }
 
-h1, h2, h3, h4, p{
-    margin: 0;
-    /*background-color: #222;*/
-    color: #ffffff;
-    font-family: 'Libre Baskerville', serif;
-}
-
-
-
 /*--The Header--*/
 .container{
     border: 1px solid red;
@@ -28,41 +24,94 @@ h1, h2, h3, h4, p{
     padding: 0;
 }
 
+h1, h2, h3, h4, p{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #ffb703;
+}
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: rgb(39, 192, 39);
+    padding: 1rem 20px;
+    background-color: #ffb703;
     /*border: 1px solid red;*/
     position: -webkit-sticky;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.logo{
+    color: #000;
+    font-weight: 700;
+}
+
+.container__menu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container__menu.visible{
+    opacity: 1;
+    visibility: visible;
 }
 
 .menu{
-    display: none;
-}
-
-.portada{
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    align-items: end;
+    gap: 30px;
+    background-color: #3cc6e9;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
 }
-
-.btn{
-    background-color: none;
-    border: none;
+.btn__cerrar{
+    font-size: 30px;
+    color: red;
+    width: 50%;
+    padding: 5px;
+}
+.menu-link{
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    transition: .5s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.menu-link:hover{
+    transition: .5s;
+    background-color: #fb8500;
+}
+.btn__sandwich{
+    background-color: #8ecae6;
+    color: #000;
+    font-weight: bold;
     font-size: 30px;
     cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #219ebc;
 }
 
-/*Main*/
-/*Home section*/
-.main-container{
-    padding: 50px 30px;
-    border: 2px solid red;
-    
+/*Main index*/
+.main__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0px;
+    padding: 10px 20px;
 }
 
 .section{
@@ -71,214 +120,276 @@ h1, h2, h3, h4, p{
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    max-width: 1024px;
+    max-width: 1000px;
 }
 
-.main-title{
+.section__title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #219ebc;
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
 }
-
-.main-text{
-    text-align: center;
-    font-size: 1.2rem;
-}
-
 .img{
-    width: 70%;
-    box-shadow: 5px 5px 20px #ffffff;
-    margin-top: 70px;
+    width: 80%;
 }
-
-/*About section*/
-.cards{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.card-img{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.titile-logo{
+.portada{
     text-align: center;
-    padding: 20px 0px;
-    color: ;
-}
-.logo-about{
-    width: 50%;
-    box-shadow: 5px 5px 20px #ffffff;
 }
 
-/*Services section*/
-.img-dev{
-    width: 50%;
-    background-color: #ffffff;
+/*Main services*/
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
-.img-proyect{
+.title__card{
+    color: #fb8500;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-shadow: -2px -2px rgb(175, 203, 175);
+
+}
+
+.card__img{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.img__card{
+    width: 70%;
+}
+
+.img__dev{
     width: 80%;
 }
 
-.text-card{
-    font-size: 1.2rem;
-    text-align: center;
+
+
+/*Main proyects*/
+.card__proyect{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(243, 243, 243);
+    padding: 15px;
+    border-radius: 15px;
+}
+.img__proyect{
+    width: 80%;
 }
 
-/*Formulario*/
+/*main contacto*/
 .formulario{
-    background-color: #24C603;
-    color: #2A0202;
-    max-width: 768px;
+    font-size: 18px;
     display: flex;
-    border: 1px solid yellow;
     flex-direction: column;
     gap: 15px;
 }
-.titile-formulario{
-    color: #2A0202;
-    font-size: 2rem;
+
+.formulario div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .text-formulario{
-    color: #2A0202;
-    padding: 10px 2px;
+    font-size: 20px;
 }
 
-.labels, .entrada{
-    display: block;
-    height: 30px;
+.labels{
+    font-size: 22px;
+    color: #1B2982;
+    font-weight: bold;
+}
 
+.entrada{
+    padding: 10px;
+    width: 95%;
+    border: none;
+    box-shadow: 0px 0px 5px green;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
 .btn-enviar{
-    background-color: aqua;
-    color: #222;
-    border-radius: 2px solid red;
-    height: 45px;
-    width: 70px;
+    margin-top: 20px;
+    padding: 15px 10px;
+    background-color: #0B402E;
+    border-radius: 15px;
+    border:none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/*Redes sociales*/
-.social-media{
-    font-size: 50px;
+.btn-enviar:hover{
+    background-color: #8ecae6;
 }
+
+
+/*Responsive Design*/
+@media (min-width: 768px) {
+    .container__menu{
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu{
+        opacity: 1;
+        visibility: inherit;
+    }
+    .menu{
+    position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+      background-color: #ffb703;
+      box-shadow: none;
+      
+    }
+
+    .btn__cerrar{
+        display: none;
+    }
+
+    .btn__sandwich{
+        display: none;
+    }
+  
+    .section__principal{
+      flex-direction: row;
+    }
+    .portada, .presentation{
+      flex: 0 0 50%;
+    }
+  
+    /*main services*/
+    .cards{
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  
+    .card__img{
+      width: 300px;
+    }
+  
+    .card__proyect{
+      width: 350px;
+    }
+    .img__proyect{
+      width: 300px;
+    }
+    
+
+    /*main contact*/
+    .text-formulario{
+        font-size: 30px;
+    }
+    .labels{
+        font-size: 25px;
+    }
+    .entrada{
+        padding: 20px;
+        width: 100%;
+        border: 1px solid gray;
+        box-shadow: none;
+    }
+
+    .btn-enviar{
+        margin-top: 20px;
+        padding: 20px 40px;
+        background-color: #0B402E;
+        border-radius: 15px;
+        border:none;
+        font-size: 25px;
+    }
+
+  }
+
+/*Footer section*/
+.footer{
+    background-color: #ffb703;
+}
+.container-footer{
+    color: #111;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+    background-color: #ffb703;
+    gap: 20px;
+    padding: 20px 30px;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+
+
+.container-footer p{
+    order: 3;
+}
+
+
 
 /*footer*/
+/*Redes sociales*/
+.social-media{
+    font-size: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    color: #71ee4f;
+    
+    
+}
+.social-media i{
+    cursor: pointer;
+}
+
+
 .derechos{
+    background-color: #ffb703;
     text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
 }
-/*Reponsive Disign*/
+
 @media (min-width: 768px) {
-    .header{
-        display: flex;
-        padding-left: 10px 30px;
+    .social-media{
+        font-size: 50px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .container-footer{
         justify-content: space-between;
-        align-items: center;
-        background-color: rgb(39, 192, 39);
-        /*border: 1px solid red;*/
     }
 
-    .menu{
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-
-    .menu-list{
-        list-style-type: none;
-        font-size: 1.2rem;
+    .container-footer h2{
+        order: 1;
     }
     
-    .menu-link{
-        text-decoration: none;
-        color: #ffffff;
-    }
-    .btn{
-        display: none;
-    }
-
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .img{
-        width: 50%;
-        box-shadow: 5px 5px 20px #ffffff;
-        margin-top: 20px;
-    }
-
-    .portada{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-}
-
-
-
-@media (min-width: 1024px) {
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgb(39, 192, 39);
-        /*border: 1px solid red;*/
-        padding: 10px 50px;
-    }
-
-    .menu{
-        display: flex;
-        justify-content: flex-end;
-        gap: 3%;
-        width: 100%;
-    }
-
-
-    .menu-list{
-        list-style-type: none;
-        font-size: 1.2rem;
+    .container-footer p{
+        order: 2;
     }
     
-    .menu-link{
-        text-decoration: none;
-        color: #ffffff;
-    }
-
-    .btn{
-        display: none;
-        
-    }
-
-    .main-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portada{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .main-title{
-        margin-left: 60%;
+    .social-media{
+        order: 3;
     }
 }
